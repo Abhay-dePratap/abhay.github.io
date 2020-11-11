@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-<title>abhay web</title>
-<meta name="description" content="AI for life">
-
+<title>Abhay dePratap</title>
+<meta name="description" content="Web page of adep">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 
 
 <style>
@@ -14,16 +14,15 @@ body, html {
 }
 
 .bgimg {
-  background-image: url('bgimg_ge.jpg');
+  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('bg_ge.jpg');
   height: 100%;
   background-position: center;
   background-size: cover;
   position: relative;
   color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
+  font-family: "Sofia";
+  font-size: 22px;
 }
-
 
 .middle {
   position: absolute;
@@ -34,16 +33,109 @@ body, html {
 }
 
 </style>
+
 <body>
 
 <div class="bgimg">
   <div class="middle">
-    <h1>COMING SOON</h1>
+    <h1>Abhay dePratap</h1>
     <hr>
-    <p>35 days left</p>
+    <h1>AI for
+     <span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ "SPACE.", "EARTH", "SOCIETY", "KNOWLEDGE.", "HUMAN" ]'></span>
+   </h1>
+   <hr>
+   <p id="demo2" style="font-size:30px"></p>
+    
   </div>
 </div>
 
+<script>
+var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+
+
+</script>
+<script>
+
+var countDownDate = new Date("Mar 1, 2021 00:00:00").getTime();
+
+
+var countdownfunction = setInterval(function() {
+
+
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("demo2").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
 </body>
 </html>
 
