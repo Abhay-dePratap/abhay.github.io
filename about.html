@@ -66,6 +66,7 @@ a:visited {
 <div class="bgimg">
 <div class="about-section">
   <h1>About</h1>
+  <a href=index.html> Back </a>
 <hr width=25%>
 </div>
   <div class="middle">
@@ -76,13 +77,37 @@ a:visited {
   </div>
 
 <div class="footer">
+  <p id="demo2" style="font-size:30px"></p>
 <hr width=25%>
 <h1>© Abhay dePratap</h1>
-<a href=index.html> Back </a>
+
 </div>
 </div>
 
 
+<script>
+
+var countDownDate = new Date("Mar 1, 2021 00:00:00").getTime();
+
+
+var countdownfunction = setInterval(function() {
+
+
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("demo2").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
 </script>
 </body>
 </html>
