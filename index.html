@@ -75,10 +75,10 @@ a:visited {
 
   </div>
 <div class="footer">
- <p id="demo2" style="font-size:30px"></p>
+<a href=about.html> ABOUT </a> 
 <hr width=50%>
  <p >Site Under Construction!</p>
-  <a href=about.html> ABOUT </a>
+  
 </div>
 </div>
 
@@ -142,30 +142,7 @@ window.onload = function() {
 
 
 </script>
-<script>
 
-var countDownDate = new Date("Mar 1, 2021 00:00:00").getTime();
-
-
-var countdownfunction = setInterval(function() {
-
-
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("demo2").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  
-  if (distance < 0) {
-    clearInterval(countdownfunction);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
 </body>
 </html>
 
