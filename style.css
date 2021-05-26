@@ -1,0 +1,65 @@
+*{
+    font-family: 'Montserrat'; 
+   }
+   
+@font-face {
+     font-family: 'Montserrat';
+     src:
+   url('montserrat-v15-latin-regular.woff2') format('woff2');
+}
+
+
+  body {
+      background: rgb(7, 6, 20);
+  background: linear-gradient(
+    5deg,
+    rgba(7, 6, 20, 1) 5%,
+    rgba(16, 25, 60, 1) 35%,
+    rgba(10, 75, 59, 1) 50%,
+    rgba(16, 25, 60, 1) 65%,
+    rgba(7, 6, 20, 1) 95%
+  );
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+h1{
+    font-size: 450%;
+}
+.white-tab{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: white;
+  color: black;
+  border: 1px;
+  border-radius: 50px;
+  overflow: visible
+}
+
+
+.main-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: 2px;
+  width: 100%;
+
+}
+
+.last-up{
+  right: 0;
+}
