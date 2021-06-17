@@ -1,0 +1,292 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!-- 
+Change log
+----------------
+previous meta tags were
+
+<meta name="description" content="Online Education template Based on HTML5.">
+<meta name="keywords" content="HTML5, Template, Design, Development, education, edulab, online cources, training, online education, best education template">
+
+changed to appropriate tags
+---------
+added new font : Montserrat
+changed web background
+changed text color and made design minimalistic  with only two color code
+added rotative text motto
+added new link button with cool animation
+removed unnecessary tags and bootcamp css
+----------
+don't know about <a id="gvlist_lnkbtnOnline_0"> and a.hitCounter.badge-done0 style
+so left as it is.
+-----------
+ -->
+
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="Online Portal of CBSE, The national level board of education in India for public and private schools, controlled and managed by Union Government of India.">
+    <meta name="keywords" content="cbse, education, results, boards, education, academics, class 12, online material, cbse news">
+  
+    <title>CBSE - Central Board of Secondary Education</title>
+    
+<style>
+  :root{
+    --main-color:#006d7e;
+  }
+
+  *{
+ font-family: 'Montserrat'; 
+  }
+
+ @font-face 
+ { font-family: 'Montserrat';
+  src:
+url('fonts/montserrat-v15-latin-regular.woff2') format('woff2');
+ }
+
+
+  body{
+
+    background:linear-gradient(to top right,var(--main-color),black,black,var(--main-color));
+    font-size: x-large;
+    color: white;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  padding-top: 2%;
+  }
+
+  .title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  text-align: center;
+  }
+  
+  .container {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+
+</style>
+<style>
+  a.hitCounter.badge-done0 {
+    background-color: #26a0da;
+    display: inline-block;
+    background-repeat: no-repeat;
+    color: #695f5f;
+    text-decoration: none;
+    text-indent: 40px;
+    padding: 7px;
+    min-width: 90px;
+    font-size: 18px;
+    background-position: 8px 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container"> 
+
+    <img src="images//logo.png"  class="center">
+
+  <div class="container title">
+
+      <h3>
+        केंद्रीय माध्यमिक शिक्षा बोर्ड<br>
+        CENTRAL BOARD OF SECONDARY EDUCATION
+      </h3>
+
+  </div>
+
+  <div>
+<!-- Motto Text Rotation HINDI-ENGLISH -->
+    <h4> &#12296; /
+      <span class="txt-rotate wh" data-period="2000" data-rotate='["Committed to Equity and Excellence in Education","शिक्षा के क्षेत्र में समानता और उत्कृष्टता के लिए प्रतिबद्ध"]'>
+      </span>&#12297;
+    </h4>
+  </div>
+
+  <div class="container">
+    <a id="gvlist_lnkbtnOnline_0" class="tablinks" href="http://cbse.gov.in/cbsenew/cbse.html" target="_blank"><b> नई वेबसाइट <br>NEW WEBSITE </b></a>
+    <a id="gvlist_lnkbtnOnline_0" class="tablinks" href="https://saras.cbse.gov.in/SARAS" target="_blank" ><b>सरस  <br>SARAS </b></a>
+    <a id="gvlist_lnkbtnOnline_0" class="tablinks" href="http://cbseresults.nic.in/CBSEResults/" target="_blank" ><b>परिणाम <br>RESULTS</b></a>
+    <a id="gvlist_lnkbtnOnline_0" class="tablinks"  href="http://cbseacademic.nic.in/index.html" target="_blank"><b>शैक्षणिक वेबसाइट <br>ACADEMIC WEBSITE</b></a>
+  </div>
+
+
+  <h5 style="color: #17a2b8;">
+    <b> Visitor Numbers Since 14th January 2021 :-</b>
+    <span style="display:inline;vertical-align: sub;"><img src='http://www.hit-counts.com/counter.php?t=MTQ1NjM5MQ==' border='5px' alt='web counter'></a></span>
+  </h5>
+    
+
+</div>
+
+<!-- tabs/button style -->
+<style>
+.tablinks {
+    padding: 5px 30px;
+    margin:20px 10px;
+    text-align: center;
+    position: relative;
+    display:inline-block;
+    cursor: pointer;
+  }
+  
+.tablinks {
+    top: 2px;
+    color: white;
+    border: 2px solid var(--main-color);
+    border-radius:50px;
+    position: relative;
+    overflow: hidden!important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: transparent!important;
+    z-index:10; 
+  }
+  
+  
+.tablinks:hover{
+  box-shadow: 5px 5px var(--main-color);
+  border: 2px solid black;
+  color: black!important;
+}
+
+.tablinks::before {
+  content: '';
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: white;
+  position: absolute;
+  -ms-transform: skewX(-20deg);
+  -webkit-transform: skewX(-20deg); 
+  transform: skewX(-20deg);   
+  left: -10%;
+  opacity: 1;
+  top: 0;
+  z-index: -12;
+  -moz-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  box-shadow:2px 0px 14px rgba(0,0,0,.6);
+} 
+
+.tablinks::after {
+  content: '';
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: var(--main-color);
+  position: absolute;
+  -ms-transform: skewX(-20deg);
+  -webkit-transform: skewX(-20deg); 
+  transform: skewX(-20deg);   
+  left: -10%;
+  opacity: 0;
+  top: 0;
+  z-index: -15;
+  -webkit-transition: all .94s cubic-bezier(.2,.95,.57,.99);
+  -moz-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+  -o-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+  transition: all .4s cubic-bezier(.2,.95,.57,.99);
+  box-shadow: 2px 0px 14px rgba(0,0,0,.6);
+}
+
+.tablinks:hover::before{
+opacity:1;
+width: 116%;
+}
+
+.tablinks:hover::after{
+opacity:1;
+width: 120%;
+}
+
+</style>
+<!-- text rotation jScript -->
+<script>
+  var TxtRotate = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+  };
+  
+  TxtRotate.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+  
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+  
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+  
+    var that = this;
+    var delta = 300 - Math.random() * 100;
+  
+    if (this.isDeleting) { delta /= 2; }
+  
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
+  
+    setTimeout(function() {
+      that.tick();
+    }, delta);
+  };
+  
+  window.onload = function() {
+    var elements = document.getElementsByClassName('txt-rotate');
+    for (var i=0; i<elements.length; i++) {
+      var toRotate = elements[i].getAttribute('data-rotate');
+      var period = elements[i].getAttribute('data-period');
+      if (toRotate) {
+        new TxtRotate(elements[i], JSON.parse(toRotate), period);
+      }
+    }
+  
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+    document.body.appendChild(css);
+  };
+  
+  
+</script>
+</body>
+</html>
