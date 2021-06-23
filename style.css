@@ -36,7 +36,7 @@
   align-items: center;
 }
 a{
-  color: color: var(--col3);;
+  color: var(--col3);;
 }
 a.no-line{
   color: inherit;
