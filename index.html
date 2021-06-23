@@ -6,102 +6,25 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="middle">
+  नमस्कारः, अस्मि
+  <h1>
+    अभय DÉ प्रताप
+  </h1>
+  <br>
+<div class="title">
    
-    <h1>
-      <span
-     class="txt-rotate wh"
-     data-period="2000"
-     data-rotate='[ "अभय DÉ प्रताप", "Abhay डी Pratap" ]'>
-      </span>
-    </h1>
-    
-    <h2 class="white-tab">साठ कोस प्रति क्षण की गति से देवयानी की ओर अग्रसर</h2>
-    <div class="main-footer">
-    <h2 class="white-tab">
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10,1.375c-3.17,0-5.75,2.548-5.75,5.682c0,6.685,5.259,11.276,5.483,11.469c0.152,0.132,0.382,0.132,0.534,0c0.224-0.193,5.481-4.784,5.483-11.469C15.75,3.923,13.171,1.375,10,1.375 M10,17.653c-1.064-1.024-4.929-5.127-4.929-10.596c0-2.68,2.212-4.861,4.929-4.861s4.929,2.181,4.929,4.861C14.927,12.518,11.063,16.627,10,17.653 M10,3.839c-1.815,0-3.286,1.47-3.286,3.286s1.47,3.286,3.286,3.286s3.286-1.47,3.286-3.286S11.815,3.839,10,3.839 M10,9.589c-1.359,0-2.464-1.105-2.464-2.464S8.641,4.661,10,4.661s2.464,1.105,2.464,2.464S11.359,9.589,10,9.589"></path>
-        
-      </svg>
-      </svg>
-      आकाशगंगा &nbsp;
-    </h2>
-    <p  class="white-tab" style="
-width: 20%;">
-    <a href="https://github.com/ad3p" target="_blank">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="40" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></p>
-<p  class="white-tab" style="
-width: 20%;">
-    <a href="mailto:ad3p@protonmail.com?subject=Through%20website" class="mail " target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="40" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
-  </p>
-<a href="cbse/cbse.html">.</a>
-
-</div></div>
-
-    
-
-
-
-<script>
-var TxtRotate = function(el, toRotate, period) {
-  this.toRotate = toRotate;
-  this.el = el;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
-  this.txt = '';
-  this.tick();
-  this.isDeleting = false;
-};
-
-TxtRotate.prototype.tick = function() {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
-
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
-
-  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-  var that = this;
-  var delta = 300 - Math.random() * 100;
-
-  if (this.isDeleting) { delta /= 2; }
-
-  if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-  }
-
-  setTimeout(function() {
-    that.tick();
-  }, delta);
-};
-
-window.onload = function() {
-  var elements = document.getElementsByClassName('txt-rotate');
-  for (var i=0; i<elements.length; i++) {
-    var toRotate = elements[i].getAttribute('data-rotate');
-    var period = elements[i].getAttribute('data-period');
-    if (toRotate) {
-      new TxtRotate(elements[i], JSON.parse(toRotate), period);
-    }
-  }
-
-  var css = document.createElement("style");
-  css.type = "text/css";
-  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-  document.body.appendChild(css);
-};
-
-
-</script>
+    <div>
+    <span style="color:var(--col1); background: var(--col1o);">github</span><span style="color: var(--mainColor);background:var(--col1) ;"> <a class="no-line" href="https://github.com/ad3p" target="_blank">github.com/ad3p</a> </span>
+    </div>-
+    <div>
+    <span style="color:var(--col2); background: var(--col2o)">mail</span><span style="color: var(--mainColor);background:var(--col2) ;"><a href="mailto:ad3p@protonmail.com?subject=Through%20website" class="mail no-line" target="_blank" rel="noopener noreferrer">ad3p@protonmail.com</a> </span>
+  </div>
+  <br><ul style="color: var(--col3);">Things you might like to see that I made
+    <li><a href="cbse/cbse.html" style="display: inline;">cbse</a></li>
+    <li><a href="https://rkmnd.github.io/" style="display: inline;" target="_blank">Recom2endiका</a></li>
+  
+  </ul>
+  
+</div>
 </body></html>
 
