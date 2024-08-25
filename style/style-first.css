@@ -1,0 +1,95 @@
+:root{
+    --caret-color-1:#560070;
+    --caret-color-2:#006d64;
+    --caret-sub-color: #14003a;
+    --border-color: #00311b;
+    --background-color:#90bec0;
+    --text-color-light:#ffffff;
+    
+}
+
+*{
+    font-family: 'Lexend';
+}
+
+@font-face {
+    font-family: 'Lexend';
+    src: url(font/Lexend-Regular.woff2) format('woff2');
+    /* src: url(font/montserrat-v15-latin-regular.woff2) format('woff2'); */
+
+}
+
+body{
+    min-height: -webkit-fill-available;
+    background-color: var(--background-color);
+    margin: 6px;
+    animation: fadeIn 2s ease;
+
+  
+
+}
+#titlePage{
+    background: linear-gradient(to top right,var(--caret-color-1),var(--caret-color-2)); 
+    min-height: -webkit-fill-available;
+    min-width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color-light);
+    padding:40px;
+}
+
+#footButtons{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    /* padding-left: 40%; */
+    /* padding-right: 40%; */
+}
+
+.heading{
+    font-size: 5rem;
+    font-weight: 600;
+}
+.sHeading{
+    font-size: 2rem;
+    padding:10px;
+    color: #dadada;
+}
+.ssHeading{
+    font-size: 1.4rem;
+    padding:10px;
+    color: rgb(221, 91, 130);
+    /* font-style: italic; */
+}
+
+.navButton{
+    background-color: var(--caret-sub-color);
+    color: var(--text-color-light);
+    font-size: 20px;
+    padding: 5px 15px;
+    border: 3px solid var(--border-color);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+@keyframes fadeIn {
+    from { opacity: 0.7; }
+    to   { opacity: 1; }
+}
+
+
+
+@media all and (max-width: 600px) {
+    #footButtons{
+        width:90%;
+        margin-top: 4rem;
+    }
+  }
+
+
+

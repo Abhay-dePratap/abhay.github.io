@@ -1,0 +1,130 @@
+:root{
+    --caret-color-1:#650086;
+    --caret-color-2:#befcf6;
+    --caret-sub-color: #14003a;
+    --border-color: #000b06;
+    --background-color:#bcbbca;
+    --text-color-light:#f7f7f7;
+    --black-color:#000000;
+    --ap-color:rgb(205, 255, 4);
+    
+}
+
+*{
+    font-family: 'Lexend';
+}
+
+@font-face {
+    font-family: 'Lexend';
+    src: url(font/Lexend-Regular.woff2) format('woff2');
+}
+
+
+
+body{
+    min-height: -webkit-fill-available;
+    background: linear-gradient(to bottom left,#ffffff,#eeebb1); 
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    /* color: var(--text-color-light); */
+    animation: fadeIn 1.5s ease;
+
+  
+
+}
+
+
+
+/* 
+div#header-nav > div.header-bar > span.pills
+ */
+#header-nav{
+    overflow: hidden;
+}
+.header-bar{
+    /* overflow: hidden; */
+    /* background: linear-gradient(to top right,var(--caret-color-1),var(--caret-color-2));  */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2px 2px;
+    border: none;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    
+}
+
+.pills{
+    /* color: var(--text-color-light); */
+    /* background-color: var(--black-color); */
+    border: none;
+    /* border: 2px solid var(--caret-color-1); */
+    /* border-radius:5px; */
+    padding: 7px 5px;
+    font-size:1rem;
+}
+a{
+    text-decoration: underline;
+    color: var(--caret-color-1);
+}
+.hButtons{
+    /* float: inline-end; */
+    color: var(--text-color-light);
+    /* background-color: var(--caret-color-2); */
+    border: 2px solid var(--text-color-light);
+    border-radius:5px;
+    padding: 7px 15px;
+    font-size: 1rem;
+
+}
+.b-r{
+    background-color:#ff4242;
+}
+.b-y{
+    background-color:#ffc640;
+}
+.b-g{
+    background-color:#45ff4e;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0.5; }
+    to   { opacity: 1; }
+}
+
+
+
+@media all and (max-width: 600px) {
+    .pills{
+        font-size: 1.2rem;
+        
+    }
+
+    .hButtons{
+        width: 34px;
+        height: 34px;
+        font-size: 10px;
+        /* padding: 30px; */
+        /* margin: 1rem; */
+    }
+
+    .button-bar{
+        /* overflow: hidden; */
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* padding: 2rem; */
+        /* padding: 10px; */
+        width: 98%; 
+
+        /* margin-top: auto; */
+
+     } 
+  }
+
+
