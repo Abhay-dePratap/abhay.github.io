@@ -65,8 +65,10 @@ div#header-nav > div.header-bar > span.pills
     font-size:1rem;
 }
 a{
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color: var(--caret-color-1);
+    text-decoration: underline dashed 1px;
+    text-underline-offset: 2px;
 }
 .hButtons{
     /* float: inline-end; */
@@ -122,8 +124,7 @@ img:hover{
 
 .proj-info a{
     color: var(--caret-sub-color);
-    text-decoration: underline dashed 1px;
-    text-underline-offset: 2px;
+    
 }
 
 
